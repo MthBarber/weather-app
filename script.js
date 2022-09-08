@@ -29,14 +29,14 @@ async function locationWeather(location) {
             wind: locationName.wind.speed,
         }
         //renders above object to corresponding HMTL fields
-        document.getElementById('locationName').innerHTML = `${currentLocation.name}`
-        document.getElementById('currentTemp').innerHTML = `${currentLocation.temperature}°C`        
-        document.getElementById('weatherIcon').innerHTML = `Symbol here ${currentLocation.weatherIcon}`
-        document.getElementById('weatherName').innerHTML = `${currentLocation.weatherName}`
-        document.getElementById('humidity').innerHTML = `${currentLocation.humidity}%`
-        document.getElementById('wind').innerHTML = `${currentLocation.wind * 3.6} KM/H`
-        document.getElementById('tempMax').innerHTML = `${currentLocation.tempMax}°C`
-        document.getElementById('tempMin').innerHTML = `${currentLocation.tempMin}°C`
+        document.getElementById('locationName').innerHTML = ` ${currentLocation.name}`
+        document.getElementById('currentTemp').innerHTML = ` ${currentLocation.temperature}°C`        
+        document.getElementById('weatherIcon').innerHTML = ` Symbol here ${currentLocation.weatherIcon}`
+        document.getElementById('weatherName').innerHTML = ` ${currentLocation.weatherName}`
+        document.getElementById('humidity').innerHTML = ` ${currentLocation.humidity}%`
+        document.getElementById('wind').innerHTML = ` ${currentLocation.wind * 3.6} KM/H`
+        document.getElementById('tempMax').innerHTML = ` ${currentLocation.tempMax}°C`
+        document.getElementById('tempMin').innerHTML = ` ${currentLocation.tempMin}°C`
 
     } catch {
         console.log("Failed to make an object")
