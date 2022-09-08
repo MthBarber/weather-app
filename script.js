@@ -28,7 +28,7 @@ async function locationWeather(location) {
             weatherName: locationName.weather[0].main,
             wind: locationName.wind.speed,
         }
-        
+        //renders above object to corresponding HMTL fields
         document.getElementById('locationName').innerHTML = `${currentLocation.name}`
         document.getElementById('currentTemp').innerHTML = `${currentLocation.temperature}°C`        
         document.getElementById('weatherIcon').innerHTML = `Symbol here ${currentLocation.weatherIcon}`
