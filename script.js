@@ -1,4 +1,4 @@
-// Function that directs uses the OpenWeatherMap API
+// Function that directs uses the OpenWeatherMap API to get current weather
 async function getWeather(location) {
     try {
         const info = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=fefaae1901088ebdb24add3e1679ecb0`, { mode: 'cors' })
@@ -46,7 +46,7 @@ async function locationWeather(location) {
 
 }
 
-//Create function for users to search for requested location's weather
+//Add eventlistener to form for users to search for requested location's weather
 
 let form = document.querySelector('form')
 
@@ -59,3 +59,27 @@ form.addEventListener("submit", (e) => {
 //Set the date
 const date = new Date();
 document.getElementById('date').innerHTML = date.toDateString()
+
+async function getForecast(location) {
+    try {
+        const info = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&APPID=fefaae1901088ebdb24add3e1679ecb0`, { mode: 'cors' })
+        let convertedInfo = await info.json()
+        console.log(convertedInfo)
+        return convertedInfo
+    } catch (error) {
+        console.log("Whoops! made an error", error)
+    }
+}
+
+
+
+getForecast("bristol")
+
+//write loop to construct html elements to add to the DOM from getForecast function
+
+for (let i = 0; i <= 8; i++){
+    const div = document.createElement('div');
+    div.className = "forecast"
+    div.style.border = 'solid 1px black';
+    document.getElementById('forecastDiv').appendChild(div)
+}

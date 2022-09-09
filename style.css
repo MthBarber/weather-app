@@ -31,6 +31,7 @@ h1 {
 
 #sidebar {
     width: 20%;
+    margin-left: 1rem;
     /* border: solid yellow 1px; */
 }
 
@@ -51,4 +52,19 @@ h1 {
 
 .weatherFields {
     font-weight: 600;
+    display: flex;
+}
+
+.weatherFields img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+#locationName {
+    font-size:xx-large;
+}
+
+#weatherName {
+    font-size: large;
 }
