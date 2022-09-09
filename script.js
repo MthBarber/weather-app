@@ -31,10 +31,10 @@ async function locationWeather(location) {
         //renders above object to corresponding HMTL fields
         document.getElementById('locationName').innerHTML = ` ${currentLocation.name}`
         document.getElementById('currentTemp').innerHTML = ` ${currentLocation.temperature}°C`        
-        document.getElementById('weatherIcon').innerHTML = ` Symbol here ${currentLocation.weatherIcon}`
+        document.getElementById('weatherIcon').src = `http://openweathermap.org/img/wn/${currentLocation.weatherIcon}@2x.png`
         document.getElementById('weatherName').innerHTML = ` ${currentLocation.weatherName}`
         document.getElementById('humidity').innerHTML = ` ${currentLocation.humidity}%`
-        document.getElementById('wind').innerHTML = ` ${currentLocation.wind * 3.6} KM/H`
+        document.getElementById('wind').innerHTML = ` ${(currentLocation.wind * 3.6).toFixed(2)} KM/H`
         document.getElementById('tempMax').innerHTML = ` ${currentLocation.tempMax}°C`
         document.getElementById('tempMin').innerHTML = ` ${currentLocation.tempMin}°C`
 
