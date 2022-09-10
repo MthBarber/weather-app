@@ -6,6 +6,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-image: url(images/forest.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,24 +43,51 @@ h1 {
 #currentWeather {
     font-size: medium;
     font-weight: 600;
-     display: flex;     
-    flex-direction: column;     
-    align-items: flex-end;    
+    display: flex;    
+    justify-content: flex-end;       
     max-height: 33%;
     width:40%;
     margin-right: 3rem;
+    
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.01);
+    border:none;
+    border-bottom: 1px solid #fff;
+    color: white;
+    font-size: medium;
+    
 }
 
 .weatherFields {
     font-weight: 600;
     display: flex;
+    flex-direction: column;
+    margin-top: 1.8rem;
 }
 
-.weatherFields img {
-    height: 2rem;
-    width: 2rem;
+.weatherFields p {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.icons-right {
+    height: 2.4rem;
+    width: 2.4rem;
     margin-right: 1rem;
-    margin-top: 8px;
+    margin-top: 3.4rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-title {
+    font-size: small;
+}
+
+.stat-value {
+    font-size: medium;
 }
 
 #locationName {
@@ -71,8 +99,10 @@ h1 {
 }
 
 #forecastDiv {
-    width: 100%;
+    width: 70%;
     height: 20%;
     display: flex;
-    
+    justify-content: space-around;
+    margin-bottom: 4rem;
+    text-align: center;
 }

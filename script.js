@@ -68,7 +68,7 @@ async function getForecast(location) {
         for (let i = 0; i <= 40; i+=8){
             const div = document.createElement('div');
             div.className = "forecast"
-            div.style.border = 'solid 1px black';
+            // div.style.border = 'solid 1px black';
             document.getElementById('forecastDiv').appendChild(div)
             const day = document.createElement('p');
             let date = new Date(convertedInfo.list[i].dt_txt)
@@ -76,10 +76,10 @@ async function getForecast(location) {
             day.innerHTML = date
             div.appendChild(day)
             const tempHigh = document.createElement('p')
-            tempHigh.innerHTML = convertedInfo.list[i].main.temp_max
+            tempHigh.innerHTML = `High: ${convertedInfo.list[i].main.temp_max}°C`
             div.appendChild(tempHigh)
             const tempLow = document.createElement('p')
-            tempLow.innerHTML = convertedInfo.list[i].main.temp_min
+            tempLow.innerHTML = `Low: ${convertedInfo.list[i].main.temp_min}°C`
             div.appendChild(tempLow)
             const weatherIcon = document.createElement('img')
             weatherIcon.src = `http://openweathermap.org/img/wn/${convertedInfo.list[i].weather[0].icon}@2x.png`

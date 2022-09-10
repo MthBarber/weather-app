@@ -19,8 +19,8 @@
             <p class="weatherFields" id="locationName"></p>
             <p class="weatherFields" id="weatherName"></p>
             <p class="weatherFields" id="currentTemp"></p>
-            <img src="#" class="weatherFields" id="weatherIcon"/>
-            <p id="date"></p>            
+            <img src="#" class="weatherFields" id="weatherIcon" />
+            <p id="date"></p>
             <form action="">
                 <input id="searchBar" type="text" placeholder="Search for a location...">
                 <button>Go!</button>
@@ -32,14 +32,40 @@
             <p class="weatherFields" id="weatherDescription"></p>
             <!-- <p class="weatherFields" id="weatherIcon"></p> -->
             <!-- <p class="weatherFields" id="weatherName"></p> -->
-            <div class="weatherFields"><img src="https://cdn-icons-png.flaticon.com/512/219/219816.png" alt="humidity-icon"><p>Humidity: </p><p id="humidity"></p></div>
-            <div class="weatherFields"><img src="https://icon-library.com/images/wind-speed-icon/wind-speed-icon-19.jpg" alt="wind-speed-icon"><p>Wind Speed: </p><p id="wind"></p></div>
-            <div class="weatherFields"><img src="https://www.freeiconspng.com/thumbs/temperature-icon-png/temperature-icon-png-1.png" alt="max-temp-icon"><p>Max Temp: </p><p id="tempMax"></p></div>
-            <div class="weatherFields"><img src="https://cdn-icons-png.flaticon.com/512/136/136610.png" alt="min-temp-icon"><p>Min Temp: </p><p id="tempMin"></p></div>
-            <p></p>
+            <div id="icons-div">
+                <img class="icons-right" src="https://cdn-icons-png.flaticon.com/512/219/219816.png"
+                    alt="humidity-icon">
+                <img class="icons-right" src="https://icon-library.com/images/wind-speed-icon/wind-speed-icon-19.jpg"
+                    alt="wind-speed-icon">
+                <img class="icons-right"
+                    src="https://www.freeiconspng.com/thumbs/temperature-icon-png/temperature-icon-png-1.png"
+                    alt="max-temp-icon">
+                <img class="icons-right" src="https://cdn-icons-png.flaticon.com/512/136/136610.png"
+                    alt="min-temp-icon">
+            </div>
+            <div id="weather-stats">
+                <div class="weatherFields">
+                    <p class="stat-title">Humidity </p>
+                    <p id="humidity" class="stat-value"></p>
+                </div>
+                <div class="weatherFields">
+                    <p class="stat-title">Wind Speed </p>
+                    <p id="wind" class="stat-value"></p>
+                </div>
+                <div class="weatherFields">
+                    <p class="stat-title">Max Temp </p>
+                    <p id="tempMax" class="stat-value"></p>
+                </div>
+                <div class="weatherFields">
+                    <p class="stat-title">Min Temp </p>
+                    <p id="tempMin" class="stat-value"></p>
+                </div>
+            </div>
+
 
         </section>
     </main>
+    <h2>5 Day Forecast</h2>
     <section id="forecastDiv">
 
     </section>
