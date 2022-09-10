@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    font-family: 'Kanit', sans-serif;
 }
 
 main {
@@ -34,6 +35,12 @@ h1 {
     width: 20%;
     margin-left: 1rem;
     /* border: solid yellow 1px; */
+}
+
+form img {
+    height: 1.5rem;
+    width: 1.5rem;
+    
 }
 
 #date {

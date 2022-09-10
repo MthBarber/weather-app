@@ -56,6 +56,12 @@ form.addEventListener("submit", (e) => {
     locationWeather(searchBar.value);
 })
 
+document.getElementById('search-button').addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(searchBar.value)
+    locationWeather(searchBar.value);
+})
+
 //Set the date
 const date = new Date();
 document.getElementById('date').innerHTML = date.toDateString()
