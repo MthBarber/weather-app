@@ -80,12 +80,15 @@ async function getForecast(location) {
             let date = new Date(convertedInfo.list[i].dt_txt)
             date = date.toDateString().slice(0,10)
             day.innerHTML = date
+            day.id="date"
             div.appendChild(day)
             const tempHigh = document.createElement('p')
             tempHigh.innerHTML = `High: ${convertedInfo.list[i].main.temp_max}°C`
+            tempHigh.id = "temp-high"
             div.appendChild(tempHigh)
             const tempLow = document.createElement('p')
             tempLow.innerHTML = `Low: ${convertedInfo.list[i].main.temp_min}°C`
+            tempLow.id = "temp-low"
             div.appendChild(tempLow)
             const weatherIcon = document.createElement('img')
             weatherIcon.src = `http://openweathermap.org/img/wn/${convertedInfo.list[i].weather[0].icon}@2x.png`

@@ -37,6 +37,11 @@ h1 {
     /* border: solid yellow 1px; */
 }
 
+form {
+    display: flex;
+    align-items: center;
+}
+
 form img {
     height: 1.5rem;
     width: 1.5rem;
@@ -58,20 +63,28 @@ form img {
     
 }
 
+#currentTemp {
+    font-size: 3.5rem;
+    margin: 0 0 0 0;
+}
+
 input {
     background-color: rgba(255, 255, 255, 0.01);
     border:none;
     border-bottom: 1px solid #fff;
     color: white;
     font-size: medium;
+    font-family: 'Kanit', sans-serif;
+    margin-right: 0.5rem;
     
 }
+
 
 .weatherFields {
     font-weight: 600;
     display: flex;
     flex-direction: column;
-    margin-top: 1.8rem;
+    margin-top: 1.5rem;
 }
 
 .weatherFields p {
@@ -105,6 +118,10 @@ input {
     font-size: large;
 }
 
+h2 {
+    font-size:xx-large;
+}
+
 #forecastDiv {
     width: 70%;
     height: 20%;
@@ -112,4 +129,17 @@ input {
     justify-content: space-around;
     margin-bottom: 4rem;
     text-align: center;
+}
+
+#date {
+    font-size:x-large;
+}
+
+#temp-high {
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+#temp-low {
+    font-size:medium;
 }
