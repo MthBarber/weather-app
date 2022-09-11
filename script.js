@@ -2,15 +2,16 @@
 async function getWeather(location) {
     try {
         const info = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=fefaae1901088ebdb24add3e1679ecb0`, { mode: 'cors' })
-        let convertedInfo = await info.json()
-        console.log(convertedInfo)
+        let convertedInfo = await info.json()        
         return convertedInfo
     } catch (error) {
         console.log("Whoops! made an error", error)
     }
 }
 
+//load info for London on page open
 locationWeather("London")
+getForecast("london")
 
 //Function that calls getWeather and stores the result in an object to be converted onto the html page
 async function locationWeather(location) {
@@ -54,12 +55,14 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log(searchBar.value)
     locationWeather(searchBar.value);
+    getForecast(searchBar.value);
 })
 
 document.getElementById('search-button').addEventListener("click", (e) => {
     e.preventDefault();
     console.log(searchBar.value)
     locationWeather(searchBar.value);
+    getForecast(searchBar.value);
 })
 
 //Set the date
@@ -70,11 +73,16 @@ async function getForecast(location) {
     try {
         const info = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&APPID=fefaae1901088ebdb24add3e1679ecb0`, { mode: 'cors' })
         let convertedInfo = await info.json()
-        console.log(convertedInfo)
-        for (let i = 0; i <= 40; i+=8){
+        
+        //clear existing HTML elements before adding new
+        let forecastDiv = document.getElementById('forecastDiv')
+        while (forecastDiv.firstChild){            
+            forecastDiv.removeChild(forecastDiv.firstChild)
+        }
+        for (let i = 0; i <= 40; i+=8){           
+            
             const div = document.createElement('div');
-            div.className = "forecast"
-            // div.style.border = 'solid 1px black';
+            div.className = "forecast"            
             document.getElementById('forecastDiv').appendChild(div)
             const day = document.createElement('p');
             let date = new Date(convertedInfo.list[i].dt_txt)
@@ -102,25 +110,3 @@ async function getForecast(location) {
 
 
 
-getForecast("bristol")
-
-//write loop to construct html elements to add to the DOM from getForecast function
-
-// for (let i = 0; i <= 40; i+=8){
-//     const div = document.createElement('div');
-//     div.className = "forecast"
-//     div.style.border = 'solid 1px black';
-//     document.getElementById('forecastDiv').appendChild(div)
-//     const day = document.createElement('p');
-//     convertedInfo.list[i]
-//     div.appendChild(day)
-//     const tempHigh = document.createElement('p')
-//     tempHigh.innerHTML = convertedInfo.list[i].main.temp_max
-//     div.appendChild(tempHigh)
-//     const tempLow = document.createElement('p')
-//     tempLow.innerHTML = convertedInfo.list[i].main.temp_min
-//     div.appendChild(tempLow)
-//     const weatherIcon = document.createElement('img')
-//     weatherIcon.src = `http://openweathermap.org/img/wn/${convertedInfo.list[i].weather[0].icon}@2x.png`
-//     div.appendChild(weatherIcon)
-// }

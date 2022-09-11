@@ -19,23 +19,19 @@
     </header>
     <main>
         <section id="sidebar">
-            <p class="weatherFields" id="locationName"></p>
-            <p class="weatherFields" id="weatherName"></p>
-            <p class="weatherFields" id="currentTemp"></p>
-            <img src="#" class="weatherFields" id="weatherIcon" />
+            <p class="weatherFieldsLeft" id="locationName"></p>
+            <p class="weatherFieldsLeft" id="weatherName"></p>
+            <p class="weatherFieldsLeft" id="currentTemp"></p>
+            <img src="#" class="weatherFieldsLeft" id="weatherIcon" />
             <p id="date"></p>
             <form action="">
-                <input id="searchBar" type="text" placeholder="Search for a location...">
-                <!-- <button>Go!</button> -->
+                <input id="searchBar" type="text" placeholder="Search for a location...">                
                 <img id="search-button" src="https://bscottnz.github.io/weather-app/imgs/search-icon.afa8a864e76e9c624eaedad03c287834.png" alt="magnifying-glass">
             </form>
         </section>
         <section id="currentWeather">
-            <!-- <p class="weatherFields" id="locationName"></p> -->
-            <!-- <p class="weatherFields" id="currentTemp"></p> -->
-            <p class="weatherFields" id="weatherDescription"></p>
-            <!-- <p class="weatherFields" id="weatherIcon"></p> -->
-            <!-- <p class="weatherFields" id="weatherName"></p> -->
+            
+            <p class="weatherFields" id="weatherDescription"></p>            
             <div id="icons-div">
                 <img class="icons-right" src="https://cdn-icons-png.flaticon.com/512/219/219816.png"
                     alt="humidity-icon">
@@ -71,7 +67,7 @@
     </main>
     <h2>5 Day Forecast</h2>
     <section id="forecastDiv">
-
+        <!-- DOM elements from API call added here -->
     </section>
 </body>
 

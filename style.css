@@ -2,14 +2,14 @@
 
 body {
     color: white;
-    height:100vh;
+    height:100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url(images/forest.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-position: center center;
     font-family: 'Kanit', sans-serif;
 }
@@ -87,6 +87,10 @@ input {
     margin-top: 1.5rem;
 }
 
+.weatherFieldsLeft {
+    margin-top: 0.5rem;
+}
+
 .weatherFields p {
     margin-bottom: 0;
     text-align: center;
@@ -120,13 +124,16 @@ input {
 
 h2 {
     font-size:xx-large;
+    margin-top: 4rem;
+    margin-right: auto;
+    margin-left: 17rem;
 }
 
 #forecastDiv {
     width: 70%;
-    height: 20%;
+    height: 15%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 4rem;
     text-align: center;
 }
