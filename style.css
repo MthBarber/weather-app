@@ -139,11 +139,11 @@ h2 {
 }
 
 #date {
-    font-size:x-large;
+    font-size:larger;
 }
 
 #temp-high {
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: 600;
 }
 
